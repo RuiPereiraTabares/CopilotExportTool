@@ -11,5 +11,5 @@ Now search for onpremises mailbox is aviliable WW for all tenants!
 
 Download the  PS1 file and open powershell as an admin
 ``` powershell
-.\TeamsExportChatTool.ps1
+.\CopilotChatExport.ps1
 ```
