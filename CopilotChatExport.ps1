@@ -83,7 +83,7 @@ While ($Loop)
             $searchName = ((Get-Date).ToString("HH:mm:ss")) + $DisplayName
             # Create the query using OR statements
             $copilotQuery = @"
-(ItemClass:IPM.SkypeTeams.Message.Copilot.Fabric. OR
+ItemClass:IPM.SkypeTeams.Message.Copilot.Fabric. OR
  ItemClass:IPM.SkypeTeams.Message.Copilot.Studio. OR
  ItemClass:IPM.SkypeTeams.Message.Copilot.Excel OR
  ItemClass:IPM.SkypeTeams.Message.TeamCopilot.AiNotes.Teams OR
@@ -100,7 +100,7 @@ While ($Loop)
  ItemClass:IPM.SkypeTeams.Message.Copilot.WebChat OR
  ItemClass:IPM.SkypeTeams.Message.Copilot.Whiteboard OR
  ItemClass:IPM.SkypeTeams.Message.Copilot.Word OR
- ItemClass:IPM.SkypeTeams.Message.Copilot.)
+ ItemClass:IPM.SkypeTeams.Message.Copilot.
 "@
             $complianceSearch = New-ComplianceSearch -Name $searchName -ContentMatchQuery $copilotQuery -ExchangeLocation $emailAddress
             Start-ComplianceSearch $searchName
@@ -222,7 +222,7 @@ While ($Loop)
                 
             # Create the query using OR statements
            $copilotQuery = @"
-(ItemClass:IPM.SkypeTeams.Message.Copilot.Fabric. OR
+ItemClass:IPM.SkypeTeams.Message.Copilot.Fabric. OR
  ItemClass:IPM.SkypeTeams.Message.Copilot.Studio. OR
  ItemClass:IPM.SkypeTeams.Message.Copilot.Excel OR
  ItemClass:IPM.SkypeTeams.Message.TeamCopilot.AiNotes.Teams OR
@@ -239,7 +239,7 @@ While ($Loop)
  ItemClass:IPM.SkypeTeams.Message.Copilot.WebChat OR
  ItemClass:IPM.SkypeTeams.Message.Copilot.Whiteboard OR
  ItemClass:IPM.SkypeTeams.Message.Copilot.Word OR
- ItemClass:IPM.SkypeTeams.Message.Copilot.)
+ ItemClass:IPM.SkypeTeams.Message.Copilot.
 "@
             $complianceSearch = New-ComplianceSearch -Name $searchName -ContentMatchQuery $copilotQuery -ExchangeLocation $PrimarySmtp -IncludeUserAppContent $true -AllowNotFoundExchangeLocationsEnabled $true
             Start-ComplianceSearch $searchName
